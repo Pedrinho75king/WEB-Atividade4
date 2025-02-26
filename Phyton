@@ -1,0 +1,60 @@
+# Função para verificar se a palavra-chave está no slogan
+def verificar_palavra_chave(slogan, palavra_chave):
+    if palavra_chave.lower() in slogan.lower():  # Ignorar maiúsculas/minúsculas
+        print(f"Slogan adequado (palavra-chave {palavra_chave} está no slogan).")
+    else:
+        print(f"Slogan inadequado (palavra-chave {palavra_chave} não está no slogan).")
+
+# Função para verificar a quantidade de palavras no slogan
+def verificar_numero_de_palavras(slogan):
+    num_palavras = len(slogan.split())  # Conta o número de palavras no slogan
+    if 7 <= num_palavras <= 10:
+        print(f"Slogan adequado ({num_palavras} palavras).")
+    else:
+        print(f"Slogan inadequado ({num_palavras} palavras).")
+
+# Função para verificar se o slogan começa e termina com uma letra
+def verificar_inicio_fim_com_letra(slogan):
+    if slogan[0].isalpha() and slogan[-1].isalpha():  # Verifica o primeiro e o último caractere
+        print("Slogan adequado (início/fim com letra).")
+    else:
+        print("Slogan inadequado (início/fim com letra).")
+
+# Função principal para processar os inputs e verificar os requisitos
+def verificar_slogan():
+    # Entradas do usuário
+    nome_produto = input("Digite o nome do produto: ")
+    slogan = input("Digite o slogan: ")
+    palavra_chave = input("Digite a palavra-chave: ")
+
+    # Verificações dos requisitos
+    verificar_palavra_chave(slogan, palavra_chave)
+    verificar_numero_de_palavras(slogan)
+    verificar_inicio_fim_com_letra(slogan)
+
+    # Verifica se o slogan atende a todos os requisitos
+    if (palavra_chave.lower() in slogan.lower() and
+        7 <= len(slogan.split()) <= 10 and
+        slogan[0].isalpha() and slogan[-1].isalpha()):
+        print(f'O slogan "{slogan}" cumpre os requisitos de slogan para o produto "{nome_produto}".')
+
+# Chama a função para rodar o programa
+verificar_slogan()
+
+# Solicita os dados ao usuário
+produto = input("Digite o nome do produto: ")
+valor_produto = float(input("Digite o valor do produto: R$ "))
+valor_pago = float(input("Digite o valor pago pelo cliente: R$ "))
+
+# Calcula o troco
+troco = valor_pago - valor_produto
+
+# Exibe o comprovante formatado
+print("\n------------------------------------")
+print("Comprovante de Venda")
+print("------------------------------------")
+print(f"Produto: {produto}\n")
+print(f"Valor do Produto: R$ {valor_produto:.2f}\n")
+print(f"Valor Pago: R$ {valor_pago:.2f}\n")
+print(f"Troco: R$ {troco:.2f}\n")
+print("------------------------------------")
