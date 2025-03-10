@@ -1,0 +1,33 @@
+# Solicita ao usuário uma frase
+frase = input("Digite uma frase: ")
+
+# Converte a frase para minúsculas
+frase_minuscula = frase.lower()
+
+# Exibe a frase transformada
+print("A frase em minúsculas é:", frase_minuscula)
+
+# Função para converter valor em dólares para float
+def dolares_para_float(d):
+    # Remover o símbolo '$' e converter para float
+    return float(d.replace('$', ''))
+
+# Função para converter percentual para float
+def percentual_para_float(p):
+    # Remover o símbolo '%' e converter para float e depois dividir por 100
+    return float(p.replace('%', '')) / 100
+
+# Parte do código já fornecida
+dolares = dolares_para_float(input("Quanto custou a refeição? "))
+percentual = percentual_para_float(input("Qual percentual você gostaria de deixar de gorjeta? "))
+gorjeta = dolares * percentual
+print(f"Deixe ${gorjeta:.2f}")
+
+# Solicita ao usuário uma frase
+frase = input("Digite uma frase: ")
+
+# Substitui os espaços por reticências
+frase_com_reticencias = frase.replace(" ", "...")
+
+# Exibe a frase com reticências
+print("A frase com reticências é:", frase_com_reticencias)
