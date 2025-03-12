@@ -1,3 +1,4 @@
+
 # Função para verificar se a palavra-chave está no slogan
 def verificar_palavra_chave(slogan, palavra_chave):
     if palavra_chave.lower() in slogan.lower():  # Ignorar maiúsculas/minúsculas
