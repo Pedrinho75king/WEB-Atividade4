@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de Seletores Filho Direto</title>
+    <style>
+        /* Seletor descendente para alterar a cor da fonte dentro da div */
+        .container * {
+            color: blue;
+        }
+
+        /* Seletor descendente para estilizar os itens da lista na segunda seção */
+        .section2 li {
+            background-color: green;
+        }
+
+        /* Seletor de filho direto para aplicar cor vermelha aos filhos diretos de .menu */
+        .menu > * {
+            color: red;
+        }
+
+        /* Seletor de filho direto para aplicar cor azul aos filhos diretos de ul */
+        ul > li {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="section1">
+            <p>Este é o primeiro parágrafo da primeira seção.</p>
+            <p>Este é o segundo parágrafo da primeira seção.</p>
+            <p>Este é o terceiro parágrafo da primeira seção.</p>
+        </section>
+        <section class="section2">
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ul>
+        </section>
+    </div>
+    
+    <div class="menu">
+        <ul>
+            <li>Item A</li>
+            <li>Item B</li>
+            <li>Item C</li>
+        </ul>
+        <p>Este é um parágrafo dentro do menu.</p>
+    </div>
+</body>
+</html>
